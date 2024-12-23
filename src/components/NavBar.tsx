@@ -22,7 +22,9 @@ function Navbar() {
         <div className="row">
           <div className="col-lg-3">
             <div className="logo-wrapper">
-              <img src={logo} alt="und-logo" />
+              <a href="/">
+                <img src={logo} alt="und-logo" />
+              </a>
               <button className="hamburger" onClick={toggleMenu}>
                 &#x2630;
               </button>
