@@ -8,8 +8,8 @@ interface PostCardProps {
 function PostCard({ post }: PostCardProps) {
   return (
     <div className="col-sm-6 col-md-3 mb-4" key={post.id}>
-      <div className="card h-100">
-        <img src={post.image} className="card-img-top p-4" alt="..." />
+      <article className="card h-100">
+        <img src={post.image} className="card-img-top p-4" alt={post.author} />
         <div className="card-body">
           <h5 className="card-title">
             {post.author}
@@ -19,7 +19,7 @@ function PostCard({ post }: PostCardProps) {
           </h5>
           <p className="card-text">{post.message}</p>
         </div>
-      </div>
+      </article>
     </div>
   );
 }

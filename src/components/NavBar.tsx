@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { KeyboardEvent, useState } from "react";
 import logo from "../assets/images/und-logo.svg";
 import { undMenuItems } from "../helper/menuItems";
 
@@ -16,8 +16,20 @@ function Navbar() {
     }
   };
 
+  // Handle Escape Key
+  const handleKeyDown = (
+    e: KeyboardEvent<HTMLDivElement | HTMLButtonElement>
+  ) => {
+    if (e.key === "Escape") {
+      setIsOpen(false);
+    }
+  };
+
   return (
     <header className="und-header">
+      <a href="#main-content" className="skip-link">
+        Skip to main content
+      </a>
       <div className="container">
         <div className="row">
           <div className="col-lg-3">
@@ -25,20 +37,42 @@ function Navbar() {
               <a href="/">
                 <img src={logo} alt="und-logo" />
               </a>
-              <button className="hamburger" onClick={toggleMenu}>
+              <button
+                className="hamburger"
+                aria-controls="mobile-menu"
+                aria-expanded={isOpen}
+                aria-label={isOpen ? "Close menu" : "Open menu"}
+                onClick={toggleMenu}
+                onKeyDown={handleKeyDown}
+              >
                 &#x2630;
               </button>
             </div>
           </div>
           {/* Off-Canvas Menu */}
-          <div className={`off-canvas-menu ${isOpen ? "open" : ""}`}>
-            <div className="close-btn" onClick={toggleMenu}>
+          <div
+            className={`off-canvas-menu ${isOpen ? "open" : ""}`}
+            role="dialog"
+            aria-hidden={!isOpen}
+            onKeyDown={handleKeyDown}
+            tabIndex={isOpen ? 0 : -1}
+          >
+            <div
+              className="close-btn"
+              aria-label="Close menu"
+              onClick={toggleMenu}
+            >
               <span>&#215;</span>
             </div>
             <div className="und-mob-logo">
               <img src={logo} alt="und-logo" />
             </div>
-            <nav className="mobile-nav">
+            <nav
+              className="mobile-nav"
+              id="mobile-menu"
+              aria-hidden={!isOpen}
+              aria-label="Mobile navigation"
+            >
               <ul>
                 {undMenuItems.map(({ item, url }, index) => (
                   <li key={index}>
@@ -52,7 +86,11 @@ function Navbar() {
           </div>
           {/* Regular Menu  */}
           <div className="col-lg-9">
-            <nav className="navbar">
+            <nav
+              className="navbar"
+              role="navigation"
+              aria-label="Main navigation"
+            >
               <ul>
                 {undMenuItems.map(({ item, url }, index) => (
                   <li key={index}>
