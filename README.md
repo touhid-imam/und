@@ -34,11 +34,11 @@ To run this project locally, follow these steps:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/und-social-media-campaign.git
+   git clone https://github.com/touhid-imam/und.git
    ```
 2. Navigate into the project directory:
    ```bash
-   cd und-social-media-campaign
+   cd und
    ```
 3. Install the dependencies:
    ```bash
@@ -48,7 +48,6 @@ To run this project locally, follow these steps:
    ```bash
    npm run dev
    ```
-   The app will be available at `http://localhost:5173` in your browser.
 
 ## Scripts
 
