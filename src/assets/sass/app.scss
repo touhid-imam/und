@@ -189,6 +189,8 @@ footer.und-footer .social-media{
 footer.und-footer .social-media ul{
   display: flex;
   grid-gap: 25px;
+  margin: 0;
+  padding: 0;
 
   li{
     a{
@@ -214,6 +216,8 @@ footer.und-footer .social-media ul{
 footer.und-footer nav.footer-nav{
   display: flex;
   justify-content: center;
+  margin: 0;
+  padding: 0;
   padding-top: 30px;
 }
 
