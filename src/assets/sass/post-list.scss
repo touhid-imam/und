@@ -1,0 +1,59 @@
+@use "./global" as *;
+
+.post-list-area{
+    h2.post-title{
+        font-family: $und-trade-gothic;
+        font-size: $und-heading2;
+        text-transform: uppercase;
+    }
+
+    .search{
+        input{
+            box-shadow: none;
+            border-color: $und-black;
+
+            &::placeholder{
+                font-family: $und-helvetica-neue;
+                color: $und-black;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    .card{
+        border: none;
+        box-shadow: 0 1px 8px $und-gray;
+        
+        h5.card-title{
+            font-family: $und-trade-gothic;
+            font-size: $und-heading3;
+
+            .date-badge{
+                display: block;
+                font-family: $und-helvetica-neue;
+                font-size: $und-body-text - 2px;
+                color: $und-primary;
+                padding: 0;
+                padding-top: 5px;
+                text-align: left;
+            }
+        }
+    }
+
+    ul.pagination{
+        li{
+            button{
+                border: 1px solid $und-black;
+                font-family: $und-helvetica-neue;
+                color: $und-black;
+                box-shadow: none;
+            }
+        }
+        li.active{
+            button{
+                background: $und-black;
+                color: $und-white;
+            }
+        }
+    }
+}

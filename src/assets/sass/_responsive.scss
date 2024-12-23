@@ -1,0 +1,83 @@
+@use "./mixin" as *;
+@use "./global" as *;
+
+@include desktop{
+    .und-header{
+        .logo-wrapper{
+            text-align: center;
+            margin-bottom: 15px;
+            img{
+                max-width: 350px;
+            }
+            
+        }
+    }
+}
+
+@include tablet{
+    .und-header {
+        .logo-wrapper{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 0;
+
+            img{
+                width: 70% !important;
+                flex-basis: 70%;
+            }
+            
+            button.hamburger{
+                display: flex !important;
+                background: $und-primary;
+                color: $und-white;
+                padding: 0;
+                line-height: 1em;
+                width: 42px;
+                height: 42px;
+                align-items: center;
+                justify-content: center;
+                border: none;
+                border-radius: 4px;
+            }
+        }
+        nav.navbar {
+            display: none !important;
+        }
+    }
+
+    // Footer 
+    footer.und-footer{
+        .und-logo{
+            padding: 25px 0;
+            img{
+                width: 100%;
+            }
+        }
+        nav.footer-nav{
+            ul{
+                flex-wrap: wrap;
+            }
+        }
+    }
+}
+
+@include phone{
+    ul.pagination{
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-gap: 6px;
+        li{
+            button{
+                border-radius: 0 !important;
+                width: 30px;
+                height: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+    }
+}

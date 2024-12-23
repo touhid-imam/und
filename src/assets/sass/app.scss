@@ -1,0 +1,212 @@
+@use './_global' as *;
+
+ul, p, h1, h2, h3, h4, h5{
+  margin: 0;
+  padding: 0;
+}
+ul{
+  list-style: none;
+}
+
+p{
+  font-family: $und-helvetica-neue;
+  font-size: $und-body-text;
+  font-weight: 600;
+}
+
+
+/* Styles */
+header.und-header{
+  padding: 15px 0;
+  border-bottom: 3px solid $und-primary;
+}
+
+header.und-header{
+  .logo-wrapper{
+    img{
+      width: 100%;
+    }
+
+    button.hamburger{
+      display: none;
+    }
+  }
+}
+
+header.und-header nav.navbar ul{
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  grid-gap: 35px;
+}
+header.und-header nav.navbar{
+  display: flex;
+  justify-content: flex-end;
+}
+header.und-header{
+  nav.navbar{
+    ul{
+      li{
+        a{
+          display: inline-block;
+          font-family: $und-trade-gothic;
+          font-size: $und-font-menu;
+          text-transform: uppercase;
+          color: $und-black;
+          text-decoration: none;
+          transition: 300ms ease-in-out;
+
+          &:hover{
+            color: $und-primary;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+// Off-Canvas Menu (Hidden by Default)
+.off-canvas-menu {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 60% !important;
+  height: 100%;
+  background: #fff;
+  box-shadow: -4px 0 10px rgba(0, 0, 0, 0.1);
+  transition: left 0.3s ease;
+  z-index: 1000;
+
+  .close-btn{
+    display: flex;
+    justify-content: flex-end;
+
+    span{
+      width: 30px;
+      height: 30px;
+      background: $und-primary;
+      color: $und-white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      left: 12px;
+      border-radius: 0 0 0 5px;
+    }
+  }
+
+  .und-mob-logo{
+    padding: 30px 0;
+    img{
+      width: 100%;
+    }
+  }
+
+  nav.mobile-nav{
+    padding-top: 25px;
+    ul{
+      display: flex;
+      flex-direction: column;
+      grid-gap: 10px;
+      margin: 0;
+      padding: 0;
+
+      li{
+        a{
+          display: block;
+          font-family: $und-trade-gothic;
+          font-size: $und-font-menu;
+          color: $und-black;
+          text-transform: uppercase;
+          text-decoration: none;
+
+        }
+      }
+    }
+  }
+}
+
+.off-canvas-menu.open {
+  left: 0;
+}
+
+body.no-scroll {
+  overflow: hidden;
+  height: 100%;
+}
+
+// Overlay to Close Menu by Clicking Outside
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 900;
+}
+
+/* footer  */
+footer.und-footer{
+  background-color: $und-black;
+  margin-top: 15px;
+}
+
+footer.und-footer .social-media{
+  display: flex;
+  justify-content: center;
+  padding-top: 25px;
+}
+
+footer.und-footer .social-media ul{
+  display: flex;
+  grid-gap: 25px;
+
+  li{
+    a{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $und-white;
+      font-size: 22px;
+      width: 45px;
+      height: 45px;
+      border: 1px solid $und-white;
+      border-radius: 50%;
+      transition: 300ms ease-in-out;
+
+      &:hover{
+        background: $und-primary;
+        border-color: $und-primary;
+      }
+    }
+  }
+}
+
+footer.und-footer nav.footer-nav{
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+}
+
+footer.und-footer nav.footer-nav ul{
+  display: flex;
+  grid-gap: 35px;
+
+  li{
+    a{
+      display: inline-block;
+      font-family: $und-trade-gothic;
+      font-size: $und-font-menu;
+      text-decoration: none;
+      color: $und-white;
+      transition: 300ms ease-in-out;
+
+      &:hover{
+        color: $und-primary;
+      }
+    }
+  }
+}

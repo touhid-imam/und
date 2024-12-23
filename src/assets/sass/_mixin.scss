@@ -1,0 +1,39 @@
+// Responsive
+$largeDesktop: 1380px;
+$desktopWidth: 992px;
+$tabletWidth: 768px;
+$phonesWidth: 600px;
+$smallPhone: 400px;
+
+/* Largescreen
+--------------------------------------------- */
+@mixin largescreen{
+	@media only screen and (max-width: #{$largeDesktop}){
+		@content;
+	}
+}
+
+/* Desktop
+--------------------------------------------- */
+@mixin desktop{
+	@media only screen and (max-width: #{$desktopWidth}){
+		@content;
+	}
+}
+
+
+/* Tablet
+--------------------------------------------- */
+@mixin tablet{
+	@media only screen and (max-width: #{$tabletWidth}){
+		@content;
+	}
+}
+
+/* Phone
+--------------------------------------------- */
+@mixin phone{
+	@media only screen and (max-width: #{$phonesWidth}){
+		@content;
+	}
+}

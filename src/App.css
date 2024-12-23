@@ -1,0 +1,149 @@
+/* TradeGothicLTBold | UND Title Font */
+@font-face {
+    font-family: 'TradeGothicLTBold';
+    src: url('./assets/fonts/tradegothic/TradeGothicLTBold.eot');
+    src: url('./assets/fonts/tradegothic/TradeGothicLTBold.eot') format('embedded-opentype'),
+         url('./assets/fonts/tradegothic/TradeGothicLTBold.woff2') format('woff2'),
+         url('./assets/fonts/tradegothic/TradeGothicLTBold.woff') format('woff'),
+         url('./assets/fonts/tradegothic/TradeGothicLTBold.ttf') format('truetype'),
+         url('./assets/fonts/tradegothic/TradeGothicLTBold.svg#TradeGothicLTBold') format('svg');
+}
+
+
+
+/* DejanireTextMedium */
+@font-face {
+    font-family: 'DejanireTextMedium';
+    src: url('./assets/fonts/dejanire/DejanireTextMedium.eot');
+    src: url('./assets/fonts/dejanire/DejanireTextMedium.eot') format('embedded-opentype'),
+         url('./assets/fonts/dejanire/DejanireTextMedium.woff2') format('woff2'),
+         url('./assets/fonts/dejanire/DejanireTextMedium.woff') format('woff'),
+         url('./assets/fonts/dejanire/DejanireTextMedium.ttf') format('truetype'),
+         url('./assets/fonts/dejanire/DejanireTextMedium.svg#DejanireTextMedium') format('svg');
+}
+
+/* Helvetica Neue Regular | UND Body Font */
+@font-face {
+    font-family: 'HelveticaNeueRegular';
+    src: url('./assets/fonts/helvetica/HelveticaNeueRegular.eot');
+    src: url('./assets/fonts/helvetica/HelveticaNeueRegular.eot') format('embedded-opentype'),
+         url('./assets/fonts/helvetica/HelveticaNeueRegular.woff2') format('woff2'),
+         url('./assets/fonts/helvetica/HelveticaNeueRegular.woff') format('woff'),
+         url('./assets/fonts/helvetica/HelveticaNeueRegular.ttf') format('truetype'),
+         url('./assets/fonts/helvetica/HelveticaNeueRegular.svg#HelveticaNeueRegular') format('svg');
+}
+
+
+/* core styles  */
+
+:root {
+  --und-primary: #00AA4F;
+  --und-black: #000000;
+  --und-white: #ffffff;
+  --und-light-gray: #ededed;
+  --und-gray: #dddddd;
+  --und-trade-gothic: "TradeGothicLTBold";
+  --und-dejanire: "DejanireTextMedium";
+  --und-helvetica-neue: 'HelveticaNeueRegular',"Helvetica",Arial,sans-serif;
+  --und-font-menu: 16px;
+  --und-heading1: 72px;
+  --und-heading2: 36px;
+  --und-heading3: 25px;
+  --und-body-text: 16px;
+}
+
+ul, p, h1, h2, h3, h4, h5{
+  margin: 0;
+  padding: 0;
+}
+ul{
+  list-style: none;
+}
+
+p{
+  font-family: var(--und-helvetica-neue);
+  font-size: var(--und-body-text);
+  font-weight: 600;
+}
+
+
+/* Styles */
+header.und-header{
+  padding: 15px 0;
+  border-bottom: 3px solid var(--und-primary);
+}
+
+header.und-header .logo-wrapper img{
+  width: 100%;
+}
+
+header.und-header nav.navbar ul{
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  grid-gap: 35px;
+}
+header.und-header nav.navbar{
+  display: flex;
+  justify-content: flex-end;
+}
+header.und-header nav.navbar ul li a{
+  display: inline-block;
+  font-family: var(--und-trade-gothic);
+  font-size: var(--und-font-menu);
+  text-transform: uppercase;
+  color: var(--und-black);
+  text-decoration: none;
+}
+
+/* footer  */
+footer.und-footer{
+  background-color: var(--und-black);
+  margin-top: 15px;
+}
+
+footer.und-footer .social-media{
+  display: flex;
+  justify-content: center;
+  padding-top: 25px;
+}
+
+footer.und-footer .social-media ul{
+  display: flex;
+  grid-gap: 25px;
+}
+footer.und-footer .social-media ul li a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--und-white);
+  font-size: 22px;
+  width: 45px;
+  height: 45px;
+  border: 1px solid var(--und-white);
+  border-radius: 50%;
+  transition: 300ms ease-in-out;
+}
+footer.und-footer .social-media ul li a:hover{
+  background: var(--und-primary);
+  border-color: var(--und-primary);
+}
+
+footer.und-footer nav.footer-nav{
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+}
+
+footer.und-footer nav.footer-nav ul{
+  display: flex;
+  grid-gap: 35px;
+}
+footer.und-footer nav.footer-nav ul li a{
+  display: inline-block;
+  font-family: var(--und-trade-gothic);
+  font-size: var(--und-font-menu);
+  text-decoration: none;
+  color: var(--und-white)
+}

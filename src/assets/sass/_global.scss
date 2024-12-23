@@ -1,0 +1,49 @@
+/* TradeGothicLTBold | UND Title Font */
+@font-face {
+    font-family: 'TradeGothicLTBold';
+    src: url('../fonts/tradegothic/TradeGothicLTBold.eot');
+    src: url('../fonts/tradegothic/TradeGothicLTBold.eot') format('embedded-opentype'),
+         url('../fonts/tradegothic/TradeGothicLTBold.woff2') format('woff2'),
+         url('../fonts/tradegothic/TradeGothicLTBold.woff') format('woff'),
+         url('../fonts/tradegothic/TradeGothicLTBold.ttf') format('truetype'),
+         url('../fonts/tradegothic/TradeGothicLTBold.svg#TradeGothicLTBold') format('svg');
+}
+
+
+
+/* DejanireTextMedium */
+@font-face {
+    font-family: 'DejanireTextMedium';
+    src: url('../fonts/dejanire/DejanireTextMedium.eot');
+    src: url('../fonts/dejanire/DejanireTextMedium.eot') format('embedded-opentype'),
+         url('../fonts/dejanire/DejanireTextMedium.woff2') format('woff2'),
+         url('../fonts/dejanire/DejanireTextMedium.woff') format('woff'),
+         url('../fonts/dejanire/DejanireTextMedium.ttf') format('truetype'),
+         url('../fonts/dejanire/DejanireTextMedium.svg#DejanireTextMedium') format('svg');
+}
+
+/* Helvetica Neue Regular | UND Body Font */
+@font-face {
+    font-family: 'HelveticaNeue';
+    src: url('../fonts/helvetica/HelveticaNeue.eot');
+    src: url('../fonts/helvetica/HelveticaNeue.eot') format('embedded-opentype'),
+         url('../fonts/helvetica/HelveticaNeue.woff2') format('woff2'),
+         url('../fonts/helvetica/HelveticaNeue.woff') format('woff'),
+         url('../fonts/helvetica/HelveticaNeue.ttf') format('truetype'),
+         url('../fonts/helvetica/HelveticaNeue.svg#HelveticaNeue') format('svg');
+}
+
+
+$und-primary: #00AA4F;
+$und-black: #000000;
+$und-white: #ffffff;
+$und-light-gray: #ededed;
+$und-gray: #dddddd;
+$und-trade-gothic: "TradeGothicLTBold";
+$und-dejanire: "DejanireTextMedium";
+$und-helvetica-neue: 'HelveticaNeue',"Helvetica",Arial,sans-serif;
+$und-font-menu: 16px;
+$und-heading1: 72px;
+$und-heading2: 36px;
+$und-heading3: 25px;
+$und-body-text: 16px;
