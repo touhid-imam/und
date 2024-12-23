@@ -8,9 +8,9 @@ function PresidentMessage() {
   return (
     <section className="president-area py-5">
       <div className="container">
-        <div className="row">
+        <div className="row mobile-rev-row">
           <div className="col-md-8">
-            <div className="president-content">
+            <div className="president-content pt-4">
               <h2>{presidentData.heading}</h2>
               <p>{presidentData.content}</p>
 

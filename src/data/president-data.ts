@@ -25,7 +25,7 @@ const presidentData: PresidentMessage = {
       box_content: "Diversity is our strength, and inclusivity is our foundation. We strive to create an inclusive online space that celebrates diverse perspectives, cultures, and experiences. Together, we can build a community where everyone feels welcome and respected."
     },
     {
-      box_heading: "Driving Innovation 2",
+      box_heading: "Driving Innovation",
       box_content: "Innovation drives progress, and social media is a powerful tool for sparking creativity and innovation. We encourage innovative thinking and bold ideas that push the boundaries of what's possible. Let's harness the power of social media to drive positive change and innovation in our community and beyond."
     },
     
